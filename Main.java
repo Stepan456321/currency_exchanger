@@ -3,15 +3,15 @@ import java.util.Scanner;
 class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        double rateUSD, rateEUR, rateGBP;
+        double USD, EUR, GBP;
 
-        double rateUSD = 1;
+        USD = 1;
 
         System.out.println("Введите курс евро к доллару:");
-        rateEUR = scanner.nextDouble();
+        EUR = scanner.nextDouble();
 
         System.out.println("Введите курс фунта стерлингов к доллару:");
-        rateGBP = scanner.nextDouble();
+        GBP = scanner.nextDouble();
 
         System.out.println("Введите сумму для конвертации:");
         double amount = scanner.nextDouble();
@@ -23,13 +23,13 @@ class Main {
 
         switch (currency) {
             case "USD":
-                result = amount * rateUSD;
+                result = amount * USD;
                 break;
             case "EUR":
-                result = amount * rateEUR;
+                result = amount * EUR;
                 break;
             case "GBP":
-                result = amount * rateGBP;
+                result = amount * GBP;
                 break;
             default:
                 System.out.println("Неверный выбор валюты.");
